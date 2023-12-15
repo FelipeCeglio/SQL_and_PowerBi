@@ -30,17 +30,17 @@ TABELAS DE REFERÊNCIAS:
 
 COLUNAS:
 
-    SalesOrderNumber				Tabela: FactInternetSales
-    OrderDate						Tabela: FactInternetSales
+    SalesOrderNumber			Tabela: FactInternetSales
+    OrderDate				Tabela: FactInternetSales
     EnglishProductCategoryName		Tabela: DimProductCategory
-    CustomerKey						Tabela: DimCustomer
-    FirstName + LastName			Tabela: DimCustomer
-    Gender							Tabela: DimCustomer
+    CustomerKey				Tabela: DimCustomer
+    FirstName + LastName		Tabela: DimCustomer
+    Gender				Tabela: DimCustomer
     EnglishCountryRegionName		Tabela: DimGeography
-    OrderQuantity					Tabela: FactInternetSales
-    SalesAmount						Tabela: FactInternetSales
-    TotalProductCost				Tabela: FactInternetSales
-    Profit							Operação Matemática: Venda - Custo
+    OrderQuantity			Tabela: FactInternetSales
+    SalesAmount				Tabela: FactInternetSales
+    TotalProductCost			Tabela: FactInternetSales
+    Profit				Operação Matemática: Venda - Custo
 
 
 CÓDIGO SQL:
@@ -65,6 +65,3 @@ CÓDIGO SQL:
     		INNER JOIN DimProductCategory AS dpc ON dps.ProductCategoryKey = dpc.ProductCategoryKey
     INNER JOIN  DimCustomer AS dc ON fis.CustomerKey = dc.CustomerKey
     	INNER JOIN DimGeography AS dg ON dc.GeographyKey = dg.GeographyKey
-
-
-SELECT * FROM VENDAS_INTERNET_2010_2013
